@@ -1,0 +1,11 @@
+/* LDPO-3: GHOST DELIVERY DETECTION SCRIPT */
+-- This identifies orders that failed specifically during high-stage load-shedding.
+SELECT 
+    order_id, 
+    region, 
+    load_shedding_stage, 
+    delivery_time_min, 
+    status
+FROM delivery1_logs
+WHERE status = 'Failed' 
+AND load_shedding_stage >= 4;
