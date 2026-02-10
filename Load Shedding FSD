@@ -1,0 +1,6 @@
+Functional Requirements,
+Power API Integration: The system shall fetch real-time load-shedding schedules via the Eskom/City Power API for the customer's specific delivery zone.
+
+Dynamic ETAs: If the delivery zone is in Stage 4 or higher, the system must automatically add a 20-minute "Buffer Time" to the customer's Estimated Time of Arrival (ETA) to account for dead traffic lights.
+
+Communication Trigger: When a blackout starts, the app must push a notification to the customer: "Your area is currently in Load-Shedding. Please ensure your gate/intercom has battery backup, or meet the driver at the main entrance.
